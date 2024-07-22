@@ -30,23 +30,23 @@ This project aims to recognize facial expressions to perform sentiment analysis 
 - Data Visualization
 
 ## Dataset
-The dataset metadata is contained in `data/face-sentiment-data-metadata.json`. The images are categorized into five expressions: Agony, Happy, Neutral, Sad, and Scared.
+We resized all images to 240x240 pixels to ensure uniformity. The dataset was then randomized and split into training, validation, and test sets to ensure a balanced distribution of early and late frames in all sets. Data augmentation techniques such as rotation and flipping were applied to enhance the model's robustness.
 
 ## Analysis
 ### Data Preprocessing
-- Randomized and split data into training, validation, and test sets using `Data_Splitting.ipynb`.
-- Applied image augmentations to the training set.
+- **Randomization and Splitting**: Data was randomized and split into training, validation, and test sets using `Data_Splitting.ipynb`.
+- **Image Augmentation**: Applied augmentations such as rotation and flipping to the training set to enhance model robustness.
 
 ### Exploratory Data Analysis
-- Visualized data distributions and key features.
+- **Data Visualization**: Visualized the distribution of each facial expression category and key features to understand patterns within the dataset.
 
 ### Modeling
-- Built and trained CNN models with data augmentation.
-- Used callbacks like early stopping and model checkpoints.
+- **Model Architecture**: Built and trained Convolutional Neural Network (CNN) models with data augmentation.
+- **Callbacks**: Implemented early stopping and model checkpoints to prevent overfitting and save the best performing models.
 
 ### Evaluation
-- Evaluated model performance on the test set.
-- Achieved high accuracy and low validation loss.
+- **Performance Metrics**: Evaluated model performance on the test set, achieving high accuracy and low validation loss, demonstrating the model's effectiveness in classifying facial expressions.
+
 
 ## Repository Structure
 ```plaintext
